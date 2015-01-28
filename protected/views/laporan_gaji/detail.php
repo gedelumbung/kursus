@@ -12,6 +12,8 @@ $this->breadcrumbs=array(
     <div class="row-fluid">
 
         <div class="span12">
+        	<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_gaji/cetak/<?php echo $id.'?bulan='.$bulan.'&tahun='.$tahun; ?>" class="btn btn-warning">Cetak</a>
+        	<br><br>
 			<table border="1" cellpadding="5" cellspacing="0" width="100%">
         		<tr>
 	        		<th>No.</th>
