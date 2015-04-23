@@ -22,8 +22,6 @@
 	'enableAjaxValidation'=>false,
 )); ?>
 
-	<p class="note">Fields with <span class="required">*</span> are required.</p>
-
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
@@ -59,12 +57,12 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'status'); ?>
-        <?php echo $form->dropDownList($model,'status',array("admin"=>"Admin","kasir"=>"Kasir","owner"=>"Owner")); ?>
+        <?php echo $form->dropDownList($model,'status',array("admin"=>"Admin","personalia"=>"Personalia","pimpinan"=>"Pimpinan")); ?>
 		<?php echo $form->error($model,'status'); ?>
 	</div>
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save', array('class' => 'btn btn-sm btn-primary')); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Tambah' : 'Simpan', array('class' => 'btn btn-sm btn-primary')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

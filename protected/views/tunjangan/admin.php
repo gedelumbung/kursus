@@ -56,8 +56,11 @@ $('.search-form form').submit(function(){
 		'nama_transaksi',
 		'bulan',
 		'tahun',
-		'jumlah',
-		'created_at',
+	     array(
+	      'header'=>'jumlah',
+	      'type'=>'raw',
+	      'value'=>'rupiah($data->jumlah)'
+	      ),
 		/*
 		'updated_at',
 		*/

@@ -35,18 +35,18 @@ $this->breadcrumbs=array(
 		        		<th><?php echo $key+1; ?></th>
 		        		<th><?php echo $value['nama_program']; ?></th>
 		        		<th>
-		        			<?php echo $honor_reguler; ?>
+		        			<?php echo rupiah($honor_reguler); ?>
 		        		</th>
 		        		<th>
 		        			<?php echo $value['jumlah_murid_reguler']; ?> orang
 		        		</th>
 		        		<th>
-		        			<?php echo $honor_private; ?> + 5000
+		        			<?php echo rupiah($honor_private); ?> + <?php echo rupiah(5000); ?>
 		        		</th>
 		        		<th>
 		        			<?php echo $value['jumlah_murid_privat']; ?> orang
 		        		</th>
-		        		<th><?php echo $sub_total; ?></th>
+		        		<th><?php echo rupiah($sub_total); ?></th>
 		        	</tr>
 		        <?php
 		        	$no = $key;
@@ -61,7 +61,7 @@ $this->breadcrumbs=array(
 		        		<th><?php echo $values['nama_transaksi']; ?></th>
 		        		<th colspan="4"></th>
 		        		<th>
-		        			<?php echo $values['jumlah']; ?>
+		        			<?php echo rupiah($values['jumlah']); ?>
 		        		</th>
 		        	</tr>
 		        <?php
@@ -69,7 +69,7 @@ $this->breadcrumbs=array(
             ?>
         		<tr>
 	        		<th colspan="6">Total.</th>
-	        		<th><?php echo $total; ?></th>
+	        		<th><?php echo rupiah($total); ?></th>
 	        	</tr>
         	</table>        </div>
 

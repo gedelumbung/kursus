@@ -40,7 +40,7 @@ $this->breadcrumbs=array(
         		<tr>
 	        		<th>No.</th>
 	        		<th>Nama Pengajar</th>
-	        		<th>Nama Program</th>
+	        		<th>Total Penghasilan</th>
 	        		<th>Bulan</th>
 	        		<th>Tahun</th>
 	        		<th>Detail</th>

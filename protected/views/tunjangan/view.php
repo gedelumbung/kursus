@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h3>View TransaksiTunjangan #<?php echo $model->id_transaksi_tambahan; ?></h3>
+<h3>Detail TransaksiTunjangan #<?php echo $model->id_transaksi_tambahan; ?></h3>
 
 <div class="portlet">
 <div class="portlet-decoration">
@@ -32,9 +32,11 @@ $this->menu=array(
 		'nama_transaksi',
 		'bulan',
 		'tahun',
-		'jumlah',
-		'created_at',
-		'updated_at',
+	     array(
+	      'label'=>'Jumlah',
+	      'type'=>'raw',
+	      'value'=>rupiah($model->jumlah)
+	      ),
 	),
 )); ?>
 

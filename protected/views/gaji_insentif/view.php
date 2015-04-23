@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h3>View TransaksiPenggajian #<?php echo $model->id_transaksi_penggajian; ?></h3>
+<h3>Detail TransaksiPenggajian #<?php echo $model->id_transaksi_penggajian; ?></h3>
 
 <div class="portlet">
 <div class="portlet-decoration">
@@ -34,8 +34,6 @@ $this->menu=array(
 		'jumlah_murid_privat',
 		'bulan',
 		'tahun',
-		'created_at',
-		'updated_at',
 	),
 )); ?>
 

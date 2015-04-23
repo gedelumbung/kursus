@@ -58,7 +58,6 @@ $('.search-form form').submit(function(){
 		'jumlah_murid_privat',
 		'bulan',
 		'tahun',
-		'created_at',
 		/*
 		'updated_at',
 		*/

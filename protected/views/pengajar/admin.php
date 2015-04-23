@@ -54,8 +54,6 @@ $('.search-form form').submit(function(){
 	      ),
 		'nama',
 		'alamat',
-		'created_at',
-		'updated_at',
 		array(
 			'class'=>'CButtonColumn',
 		),

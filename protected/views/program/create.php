@@ -12,6 +12,6 @@ $this->menu=array(
 );
 ?>
 
-<h3>Create Program</h3>
+<h3>Tambah Program</h3>
 
 <?php $this->renderPartial('_form', array('model'=>$model)); ?>

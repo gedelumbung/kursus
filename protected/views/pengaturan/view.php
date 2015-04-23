@@ -13,7 +13,7 @@ $this->menu=array(
 );
 ?>
 
-<h3>View Pengaturan #<?php echo $model->id_pengaturan; ?></h3>
+<h3>Detail Pengaturan #<?php echo $model->id_pengaturan; ?></h3>
 
 <div class="portlet">
 <div class="portlet-decoration">

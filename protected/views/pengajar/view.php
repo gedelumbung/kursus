@@ -30,8 +30,6 @@ $this->menu=array(
 		'id_pengajar',
 		'nama',
 		'alamat',
-		'created_at',
-		'updated_at',
 	),
 )); ?>
 

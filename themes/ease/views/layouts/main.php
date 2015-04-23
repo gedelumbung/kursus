@@ -378,6 +378,11 @@ div.grid-view {
 					<a href="<?php echo Yii::app()->baseUrl; ?>/dashboard"><i class="icon-home icon-white"></i><span>Dashboard</span></a>
 				</li>
 
+				<?php
+					if(Yii::app()->user->status==='admin')
+					{
+				?>
+
 				<li class='active'>
 					<a href="#"><i class="icon-th-large icon-white"></i><span>Master Data</span><span class="label">2</span></a>
 					<ul class="subnav">
@@ -408,6 +413,9 @@ div.grid-view {
 						<li>
 							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_gaji"><i class="icon-th-list icon-white"></i><span> Laporan Transaksi Gaji</span></a>
 						</li>
+						<li>
+							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_bulan_tahun"><i class="icon-th-list icon-white"></i><span> Laporan Bulan dan Tahun</span></a>
+						</li>
 					</ul>
 				</li>
 
@@ -425,6 +433,26 @@ div.grid-view {
 						</li>
 					</ul>
 				</li>
+				<?php
+					}
+					else{
+						?>
+
+				<li class='active'>
+					<a href="#"><i class="icon-th-large icon-white"></i><span>Laporan</span><span class="label">1</span></a>
+					<ul class="subnav">
+						<li>
+							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_gaji"><i class="icon-th-list icon-white"></i><span> Laporan Transaksi Gaji</span></a>
+						</li>
+						<li>
+							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_bulan_tahun"><i class="icon-th-list icon-white"></i><span> Laporan Bulan dan Tahun</span></a>
+						</li>
+					</ul>
+				</li>
+
+				<?php
+					}
+					?>
 
 			</ul>
 

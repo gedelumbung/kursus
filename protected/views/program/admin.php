@@ -53,9 +53,17 @@ $('.search-form form').submit(function(){
 	      'value'=>'$this->grid->dataProvider->pagination->currentPage*$this->grid->dataProvider->pagination->pageSize + $row+1'
 	      ),
 		'nama',
-		'harga_reguler',
+	     array(
+	      'header'=>'Harga Reguler',
+	      'type'=>'raw',
+	      'value'=>'rupiah($data->harga_reguler)'
+	      ),
 		'pertemuan_reguler',
-		'harga_privat',
+	     array(
+	      'header'=>'Harga Privat',
+	      'type'=>'raw',
+	      'value'=>'rupiah($data->harga_privat)'
+	      ),
 		'pertemuan_privat',
 		/*
 		'created_at',

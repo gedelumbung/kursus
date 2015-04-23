@@ -15,7 +15,7 @@ $this->menu=array(
 );
 ?>
 
-<h3>View Program #<?php echo $model->id_program; ?></h3>
+<h3>Detail Program #<?php echo $model->id_program; ?></h3>
 
 <div class="portlet">
 <div class="portlet-decoration">
@@ -29,12 +29,18 @@ $this->menu=array(
 	'attributes'=>array(
 		'id_program',
 		'nama',
-		'harga_reguler',
+	     array(
+	      'label'=>'Harga Reguler',
+	      'type'=>'raw',
+	      'value'=>rupiah($model->harga_reguler)
+	      ),
 		'pertemuan_reguler',
-		'harga_privat',
+	     array(
+	      'label'=>'Harga Privat',
+	      'type'=>'raw',
+	      'value'=>rupiah($model->harga_privat)
+	      ),
 		'pertemuan_privat',
-		'created_at',
-		'updated_at',
 	),
 )); ?>
 
