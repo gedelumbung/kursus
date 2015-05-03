@@ -1,17 +1,12 @@
 <?php
 
-class TotalGaji extends CWidget
+class TotalGajiTahunan extends CWidget
 {
-    public $bulan;
     public $tahun;
-    public $id_user;
 
     public function run()
     {
-
-        $bulan = $this->bulan;
         $tahun = $this->tahun;
-        $id = $this->id_user;
 
         $arr_gaji = Yii::app()->db->createCommand('select a.id_guru as id_pengajar, 
             a.id_transaksi_penggajian, 
@@ -27,7 +22,7 @@ class TotalGaji extends CWidget
             c.pertemuan_privat, 
             a.jumlah_murid_privat
             from tbl_transaksi_penggajian a left join tbl_pengajar b on a.id_guru=b.id_pengajar left join tbl_program c on a.id_program=c.id_program 
-            where a.bulan="'.$bulan.'" and a.tahun="'.$tahun.'" and a.id_guru="'.$id.'"')->queryAll();
+            where a.tahun="'.$tahun.'"')->queryAll();
 
         $arr_tunjangan = Yii::app()->db->createCommand('select a.id_guru as id_pengajar, 
             a.id_transaksi_tambahan, 
@@ -37,7 +32,7 @@ class TotalGaji extends CWidget
             a.bulan, 
             a.tahun
             from tbl_transaksi_tambahan a left join tbl_pengajar b on a.id_guru=b.id_pengajar
-            where a.bulan="'.$bulan.'" and a.tahun="'.$tahun.'" and a.id_guru="'.$id.'"')->queryAll();
+            where a.tahun="'.$tahun.'"')->queryAll();
 
         $total = 0;
         foreach ($arr_gaji as $key => $value) {

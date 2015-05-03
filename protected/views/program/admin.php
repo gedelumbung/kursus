@@ -54,6 +54,11 @@ $('.search-form form').submit(function(){
 	      ),
 		'nama',
 	     array(
+	      'header'=>'Gaji Pokok',
+	      'type'=>'raw',
+	      'value'=>'rupiah($data->gaji_pokok)'
+	      ),
+	     array(
 	      'header'=>'Harga Reguler',
 	      'type'=>'raw',
 	      'value'=>'rupiah($data->harga_reguler)'

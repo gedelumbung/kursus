@@ -31,13 +31,13 @@ class Program extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('nama, harga_reguler, pertemuan_reguler, harga_privat, created_at, updated_at', 'required'),
-			array('harga_reguler, pertemuan_reguler, harga_privat, pertemuan_privat', 'numerical', 'integerOnly'=>true),
+			array('nama, harga_reguler, gaji_pokok, pertemuan_reguler, harga_privat, created_at, updated_at', 'required'),
+			array('harga_reguler, gaji_pokok, pertemuan_reguler, harga_privat, pertemuan_privat', 'numerical', 'integerOnly'=>true),
 			array('nama', 'length', 'max'=>100),
 			array('created_at, updated_at', 'length', 'max'=>50),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id_program, nama, harga_reguler, pertemuan_reguler, harga_privat, pertemuan_privat, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id_program, gaji_pokok, nama, harga_reguler, pertemuan_reguler, harga_privat, pertemuan_privat, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -66,6 +66,7 @@ class Program extends CActiveRecord
 			'pertemuan_privat' => 'Pertemuan Privat',
 			'created_at' => 'Created At',
 			'updated_at' => 'Updated At',
+			'gaji_pokok' => 'Gaji Pokok',
 		);
 	}
 

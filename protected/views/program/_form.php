@@ -31,6 +31,12 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'gaji_pokok'); ?>
+		<?php echo $form->textField($model,'gaji_pokok', array('class'=>'input-block-level')); ?>
+		<?php echo $form->error($model,'gaji_pokok'); ?>
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'harga_reguler'); ?>
 		<?php echo $form->textField($model,'harga_reguler', array('class'=>'input-block-level')); ?>
 		<?php echo $form->error($model,'harga_reguler'); ?>

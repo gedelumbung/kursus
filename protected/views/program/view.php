@@ -30,6 +30,11 @@ $this->menu=array(
 		'id_program',
 		'nama',
 	     array(
+	      'label'=>'Gaji Pokok',
+	      'type'=>'raw',
+	      'value'=>rupiah($model->gaji_pokok)
+	      ),
+	     array(
 	      'label'=>'Harga Reguler',
 	      'type'=>'raw',
 	      'value'=>rupiah($model->harga_reguler)

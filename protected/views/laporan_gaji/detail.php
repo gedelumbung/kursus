@@ -20,6 +20,7 @@ $this->breadcrumbs=array(
         		<tr>
 	        		<th>No.</th>
 	        		<th>Program</th>
+	        		<th>Gaji Pokok</th>
 	        		<th colspan="2">Kelas Reguler</th>
 	        		<th colspan="2">Kelas Privat</th>
 	        		<th>Sub Total</th>
@@ -30,12 +31,15 @@ $this->breadcrumbs=array(
             	foreach ($arr_gaji as $key => $value) {
             		$honor_reguler = $value['harga_reguler']*40/100/$value['pertemuan_reguler'];
             		$honor_private = $value['harga_privat']*50/100;
-            		$sub_total = ($honor_reguler*$value['jumlah_murid_reguler']) + (($honor_private)*$value['jumlah_murid_privat']);
+            		$sub_total = ($value['gaji_pokok'] + $honor_reguler*$value['jumlah_murid_reguler']) + (($honor_private)*$value['jumlah_murid_privat']);
             		$total = $total+$sub_total;
             	?>
 	        		<tr>
 		        		<th><?php echo $key+1; ?></th>
 		        		<th><?php echo $value['nama_program']; ?></th>
+		        		<th>
+		        			<?php echo rupiah($value['gaji_pokok']); ?>
+		        		</th>
 		        		<th>
 		        			<?php echo rupiah($honor_reguler); ?>
 		        		</th>
@@ -43,7 +47,7 @@ $this->breadcrumbs=array(
 		        			<?php echo $value['jumlah_murid_reguler']; ?> orang
 		        		</th>
 		        		<th>
-		        			<?php echo rupiah($honor_private); ?> + <?php echo rupiah(5000); ?>
+		        			<?php echo rupiah($honor_private); ?>
 		        		</th>
 		        		<th>
 		        			<?php echo $value['jumlah_murid_privat']; ?> orang
@@ -61,7 +65,7 @@ $this->breadcrumbs=array(
 	        		<tr>
 		        		<th><?php echo $no+$keys+2; ?></th>
 		        		<th><?php echo $values['nama_transaksi']; ?></th>
-		        		<th colspan="4"></th>
+		        		<th colspan="5"></th>
 		        		<th>
 		        			<?php echo rupiah($values['jumlah']); ?>
 		        		</th>
@@ -70,7 +74,7 @@ $this->breadcrumbs=array(
             	}
             ?>
         		<tr>
-	        		<th colspan="6">Total.</th>
+	        		<th colspan="7">Total.</th>
 	        		<th><?php echo rupiah($total); ?></th>
 	        	</tr>
         	</table>        </div>
