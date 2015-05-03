@@ -42,6 +42,7 @@ select{
 	<h3><?php echo $_SESSION['site_address']; ?></h3>
 </div>
 <br><br>
+        	<h4>Nama Pengajar : <?php echo $arr_gaji[0]['nama']; ?></h4>
 Bulan : 
 <select name="bulan">
 	<?php $this->widget('SelectOpBulan', array('id_select' => (array_key_exists('bulan',$_SESSION) ? $_SESSION['bulan'] : date('m')))); ?>

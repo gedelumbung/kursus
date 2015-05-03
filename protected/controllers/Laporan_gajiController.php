@@ -41,6 +41,7 @@ class Laporan_gajiController extends Controller
 		$pengajar = Pengajar::model()->findByPk($id);
 
 		$arr_gaji = Yii::app()->db->createCommand('select a.id_guru as id_pengajar, 
+			b.nama,
 			a.id_transaksi_penggajian, 
 			b.nama as nama_pengajar, 
 			c.nama as nama_program, 
@@ -81,6 +82,7 @@ class Laporan_gajiController extends Controller
 		$pengajar = Pengajar::model()->findByPk($id);
 
 		$arr_gaji = Yii::app()->db->createCommand('select a.id_guru as id_pengajar, 
+			b.nama,
 			a.id_transaksi_penggajian, 
 			b.nama as nama_pengajar, 
 			c.nama as nama_program, 

@@ -414,7 +414,10 @@ div.grid-view {
 							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_gaji"><i class="icon-th-list icon-white"></i><span> Laporan Transaksi Gaji</span></a>
 						</li>
 						<li>
-							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_bulan_tahun"><i class="icon-th-list icon-white"></i><span> Laporan Bulan dan Tahun</span></a>
+							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_bulanan"><i class="icon-th-list icon-white"></i><span> Laporan Bulanan</span></a>
+						</li>
+						<li>
+							<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_tahunan"><i class="icon-th-list icon-white"></i><span> Laporan Tahunan</span></a>
 						</li>
 					</ul>
 				</li>

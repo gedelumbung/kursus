@@ -14,6 +14,8 @@ $this->breadcrumbs=array(
         <div class="span12">
         	<a href="<?php echo Yii::app()->baseUrl; ?>/laporan_gaji/cetak/<?php echo $id.'?bulan='.$bulan.'&tahun='.$tahun; ?>" class="btn btn-warning">Cetak</a>
         	<br><br>
+        	<h4>Nama Pengajar : <?php echo $arr_gaji[0]['nama']; ?></h4>
+        	<br>
 			<table border="1" cellpadding="5" cellspacing="0" width="100%">
         		<tr>
 	        		<th>No.</th>
@@ -28,7 +30,7 @@ $this->breadcrumbs=array(
             	foreach ($arr_gaji as $key => $value) {
             		$honor_reguler = $value['harga_reguler']*40/100/$value['pertemuan_reguler'];
             		$honor_private = $value['harga_privat']*50/100;
-            		$sub_total = ($honor_reguler*$value['jumlah_murid_reguler']) + (($honor_private+5000)*$value['jumlah_murid_privat']);
+            		$sub_total = ($honor_reguler*$value['jumlah_murid_reguler']) + (($honor_private)*$value['jumlah_murid_privat']);
             		$total = $total+$sub_total;
             	?>
 	        		<tr>

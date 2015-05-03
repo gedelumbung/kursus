@@ -51,7 +51,7 @@ $this->breadcrumbs=array(
 	        		<tr>
 		        		<th><?php echo $key+1; ?></th>
 		        		<th><?php echo $value['nama_pengajar']; ?></th>
-		        		<th><?php echo $value['nama_program']; ?></th>
+		        		<th><?php $this->widget('TotalGaji', array('bulan' => $value['bulan'], 'tahun' => $value['tahun'], 'id_user' => $value['id_pengajar'])); ?></th>
 		        		<th><?php echo $value['bulan']; ?></th>
 		        		<th><?php echo $value['tahun']; ?></th>
 		        		<th><a href="<?php echo Yii::app()->baseUrl; ?>/laporan_gaji/detail/<?php echo $value['id_pengajar']; ?>?bulan=<?php echo $value['bulan']; ?>&tahun=<?php echo $value['tahun']; ?>" class="btn btn-small btn-danger">Detail</a></th>
